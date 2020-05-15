@@ -19,6 +19,7 @@
                 <ul class="messages">
                 {% for message in messages %}
                     <li{% if message.tags %} class="success"{% endif %}>{{ message }}</li>
+                    <div class="wallet"><img src="{% static 'service/img/money.jpg' %}" style="width: 30px; height: 30px;" alt="money"><p>4100 1503 8591 281</p></div>
                 {% endfor %}
                 </ul>
             {% endif %}

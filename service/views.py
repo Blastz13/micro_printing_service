@@ -37,7 +37,6 @@ class ServicePage(View):
                 photo.save()
 
             messages.success(request, f'Ваш заказ успешно зарегистрирован! '
-                                      f'Для оплаты заказа вам необходимо пополнить кошелек ЯДеньги на сумму в размере - {cd["total_price"]} руб. '
-                                      f'4100 1503 8591 281')
+                                      f'Для оплаты заказа вам необходимо пополнить кошелек ЯндексДеньги на сумму в размере - {cd["total_price"]} руб. ')
             return redirect('ServicePage')
         return HttpResponse('gg')

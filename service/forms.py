@@ -68,7 +68,7 @@ class CreateOrderForm(forms.Form):
     quantity = forms.IntegerField(widget=forms.NumberInput(attrs={'class': 'field', 'min': '1',
                                                                   'step': '1', 'value': '1',
                                                                   'placeholder': 'Количество'}))
-    comment = forms.CharField(widget=forms.Textarea(attrs={'class': 'field', 'style': 'resize: vertical;'}))
+    comment = forms.CharField(widget=forms.Textarea(attrs={'class': 'field', 'style': 'resize: vertical;'}), required=False)
     photos = forms.ImageField(label='Фотографии', widget=forms.FileInput(attrs={'multiple': 'multiple', 'class': 'field'}))
     total_price = forms.CharField(widget=forms.TextInput(attrs={'type': 'hidden'}))
     accept_conditions = forms.BooleanField(widget=forms.CheckboxInput(attrs={'required': True}))
@@ -82,7 +82,7 @@ class CreateOrderForm(forms.Form):
 
     def clean(self):
         cleaned_data = super(CreateOrderForm, self).clean()
-        print(cleaned_data)
+
         for choices in CHOICES_ATTRS:
             if (cleaned_data['size'] in choices) and (int(choices[2]) * int(cleaned_data['quantity']) == int(cleaned_data['total_price'])):
                 return
