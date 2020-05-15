@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="{% static 'service/css/styles.css' %}">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="icon" href="{% static 'service/img/ico.png' %}" type="image/x-icon" />
   <title>Фотомаг | Печать фото</title>
 </head>
 <body>
@@ -21,7 +22,7 @@
                 {% endfor %}
                 </ul>
             {% endif %}
-	      <h1 id="title">Дистанционная печать фотографий</h1>
+	      <h1 id="title">Заказ дистанционной печати фото</h1>
 	    </div>
 	    <div>
 	    <form action="{% url 'ServicePage' %}" method="post" name="calculator" enctype="multipart/form-data">{% csrf_token %}
@@ -35,10 +36,12 @@
 	        <label for="size">Тип и формат бумаги</label>
               {{ form.quantity }}
 	        <label for="quantity">Количество фото</label>
+              {{ form.comment }}
+            <label for="id_comment">Коментарий к заказу</label>
               {{ form.photos }}
 	        <span id="total_price">Стоимость печати: <span id="price"></span> руб.</span>
 	        <label>{{ form.accept_conditions }} Я согласен на обработку персональных данных</label>
-	        <input type="submit" id="submit">
+	        <input type="submit" id="submit" value="Отправить">
 	      </div>
 	    </form>
 		</div>

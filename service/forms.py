@@ -10,8 +10,10 @@ CHOICES = [
     ("15x21 Noname глянец (Китай)", "15x21 Noname глянец (Китай)"),
     ("21x30 Lomond глянец (Германия)", "21x30 Lomond глянец (Германия)"),
     ("21x30 Noname глянец (Китай)", "21x30 Noname глянец (Китай)"),
+    ("21x30 Офисная бумага (Россия)", "21x30 Офисная бумага (Россия)"),
     ("30x40 Lomond глянец (Германия)", "30x40 Lomond глянец (Германия)"),
     ("30x40 Noname глянец (Китай)", "30x40 Noname глянец (Китай)"),
+    ("30x40 Офисная бумага (Россия)", "30x40 Офисная бумага (Россия)"),
 
     ("15x21 Lomond матовая (Германия)", "15x21 Lomond матовая (Германия)"),
     ("15x21 Noname матовая (Китай)", "15x21 Noname матовая(Китай)"),
@@ -28,8 +30,10 @@ CHOICES_ATTRS = [
     ("15x21 Noname глянец (Китай)", "15x21 Noname глянец (Китай)", "20"),
     ("21x30 Lomond глянец (Германия)", "21x30 Lomond глянец (Германия)", "55"),
     ("21x30 Noname глянец (Китай)", "21x30 Noname глянец (Китай)", "40"),
+    ("21x30 Офисная бумага (Россия)", "21x30 Офисная бумага (Россия)", "20"),
     ("30x40 Lomond глянец (Германия)", "30x40 Lomond глянец (Германия)", "180"),
     ("30x40 Noname глянец (Китай)", "30x40 Noname глянец (Китай)", "120"),
+    ("30x40 Офисная бумага (Россия)", "30x40 Офисная бумага (Россия)", "50"),
 
     ("15x21 Lomond матовая (Германия)", "15x21 Lomond матовая (Германия)", "22"),
     ("15x21 Noname матовая (Китай)", "15x21 Noname матовая(Китай)", "18"),
@@ -56,15 +60,16 @@ class CustomSelectWidget(Select):
 
 
 class CreateOrderForm(forms.Form):
-    last_name = forms.CharField(widget=forms.TextInput(attrs={'id': 'field', 'placeholder': 'Фамилия'}))
-    first_name = forms.CharField(widget=forms.TextInput(attrs={'id': 'field', 'placeholder': 'Имя'}))
-    tel = forms.CharField(widget=forms.TextInput(attrs={'id': 'field', 'type': 'tel',
+    last_name = forms.CharField(widget=forms.TextInput(attrs={'class': 'field', 'placeholder': 'Фамилия'}))
+    first_name = forms.CharField(widget=forms.TextInput(attrs={'class': 'field', 'placeholder': 'Имя'}))
+    tel = forms.CharField(widget=forms.TextInput(attrs={'class': 'field', 'type': 'tel',
                                                         'pattern': '^\+7\d{3}\d{7}$',
                                                         'value': '+7', 'maxlength': '12'}))
-    quantity = forms.IntegerField(widget=forms.NumberInput(attrs={'id': 'field', 'min': '1',
+    quantity = forms.IntegerField(widget=forms.NumberInput(attrs={'class': 'field', 'min': '1',
                                                                   'step': '1', 'value': '1',
                                                                   'placeholder': 'Количество'}))
-    photos = forms.ImageField(label='Фотографии', widget=forms.FileInput(attrs={'multiple': 'multiple', 'id': 'field'}))
+    comment = forms.CharField(widget=forms.Textarea(attrs={'class': 'field', 'style': 'resize: vertical;'}))
+    photos = forms.ImageField(label='Фотографии', widget=forms.FileInput(attrs={'multiple': 'multiple', 'class': 'field'}))
     total_price = forms.CharField(widget=forms.TextInput(attrs={'type': 'hidden'}))
     accept_conditions = forms.BooleanField(widget=forms.CheckboxInput(attrs={'required': True}))
 
@@ -73,7 +78,7 @@ class CreateOrderForm(forms.Form):
 
         self.fields['size'] = forms.CharField(label='size',  widget=CustomSelectWidget(choices=CHOICES,
                                                                                        disabled_choices=CHOICES_ATTRS,
-                                                                                       attrs={'id': 'size'}))
+                                                                                       attrs={'class': 'field'}))
 
     def clean(self):
         cleaned_data = super(CreateOrderForm, self).clean()

@@ -11,6 +11,7 @@ class Order(models.Model):
     total_price = models.DecimalField(max_digits=20, decimal_places=2, verbose_name='Общая стоимость')
     accept_conditions = models.BooleanField(default=False, verbose_name="Согласие на обработку персональных данных")
     is_payed = models.BooleanField(default=False, verbose_name="Оплачено")
+    comment = models.CharField(max_length=1000, blank=True, verbose_name="Коментарий")
 
     @property
     def quantity_upload_photos(self):

@@ -26,6 +26,7 @@ class ServicePage(View):
                                          tel=cd['tel'],
                                          size=cd['size'],
                                          quantity=cd['quantity'],
+                                         comment=cd['comment'],
                                          total_price=cd['total_price'],
                                          accept_conditions=cd['accept_conditions'])
             for f in request.FILES.getlist('photos'):
