@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3455aa8a-d650-4694-8939-aa96c553c00a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/micro_printing_service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/micro_printing_service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/static/service/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/service/static/service/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/templates/service/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/service/templates/service/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/service/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/service/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/demo.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/photos/10/113.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/photos/10/2327.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/photos/10/5855.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/photos/10/934.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/photos/15/1026.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/photos/15/2222.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/photos/15/3951.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zip/Синицын  +72311111111  21x30 Noname глянец (Китай) x3=120.00.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zip/Синицын  +79393939333  15x21 Lomond глянец (Германия) x10=260.00.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +116,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="702" y="349" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589016754058">
