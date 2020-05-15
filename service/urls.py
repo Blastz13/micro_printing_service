@@ -4,7 +4,7 @@ from django.conf.urls.static import static
 from .views import ServicePage
 
 urlpatterns = [
-    path('print_photo/', ServicePage.as_view(), name="ServicePage")
+    path('', ServicePage.as_view(), name="ServicePage")
 ]
 
 if settings.DEBUG is True:

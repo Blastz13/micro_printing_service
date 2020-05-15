@@ -24,14 +24,14 @@ class AdminProduct(admin.ModelAdmin):
     # i am idiot:)
     def export_image(self, request, queryset):
         for model in queryset:
-            path = f'D:\\micro_printing_service\\zip\\{model.last_name}  {model.tel}  {model.size} x{model.quantity}={model.total_price}.zip'
+            path = f'/home/micro_printing_service/zip/{model.last_name}  {model.tel}  {model.size} x{model.quantity}={model.total_price}.zip'
             newzip = zipfile.ZipFile(f'{path}', 'w')
             for photo in Photo.objects.filter(order_id=model.pk):
-                url = os.path.join('D:/micro_printing_service' + photo.photos.url)
+                url = os.path.join('/home/micro_printing_service' + photo.photos.url)
                 newzip.write(url)
         newzip.close()
         img = open(f'{path}', 'rb')
         response = FileResponse(img)
         return response
-
+    
     export_image.short_description = "Экспорт фото"
