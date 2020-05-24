@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$b8=1b7=y*kj7h(=tw1_3hl7)r=hzx-gr4o2npjic(q9!ppbyv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['45.143.94.128']
 
@@ -126,3 +126,11 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
+
+# Email settings
+
+EMAIL_HOST = 'smtp.mail.ru'
+EMAIL_PORT = 2525
+EMAIL_HOST_USER = "django_shop@mail.ru"
+EMAIL_HOST_PASSWORD = "ipm-dTu2TP8Y"
+EMAIL_USE_TLS = True
